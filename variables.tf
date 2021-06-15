@@ -8,47 +8,42 @@ variable "region" {
   default = "europe-west2"
 }
 
-# variable "region" {
-#   description = "GCP region identifier"
+# variable "zones" {
+#   description = "GCP zone identifier"
+#   type        = list
+# }
+
+# variable "host_project" {
+#   description = "shared vpc name"
 #   type        = string
 # }
 
-variable "zones" {
-  description = "GCP zone identifier"
-  type        = list
-}
+# variable "watchman_token" {
+#   type = string
+# }
 
-variable "host_project" {
-  description = "shared vpc name"
-  type        = string
-}
+# variable "network" {
+#   description = "Network to deploy to. Only one of network or subnetwork should be specified."
+#   default     = "skyde-test-net01"
+# }
 
-variable "watchman_token" {
-  type = string
-}
+# variable "subnetwork" {
+#   description = "Subnet to deploy to. Only one of network or subnetwork should be specified."
+#   default     = "skyde-test-sn-nodes"
+# }
 
-variable "network" {
-  description = "Network to deploy to. Only one of network or subnetwork should be specified."
-  default     = "skyde-test-net01"
-}
+# variable "subnet_2" {
+#   description = "Subnet to deploy to. Only one of network or subnetwork should be specified."
+#   default     = ""
+# }
 
-variable "subnetwork" {
-  description = "Subnet to deploy to. Only one of network or subnetwork should be specified."
-  default     = "skyde-test-sn-nodes"
-}
+# variable "can_ip_forward" {
+#   description = "Enable IP forwarding, for NAT instances for example"
+#   default     = "false"
+# }
 
-variable "subnet_2" {
-  description = "Subnet to deploy to. Only one of network or subnetwork should be specified."
-  default     = ""
-}
-
-variable "can_ip_forward" {
-  description = "Enable IP forwarding, for NAT instances for example"
-  default     = "false"
-}
-
-variable "target_pools" {
-  description = "The target load balancing pools to assign this group to."
-  type        = list(string)
-  default     = []
-}
+# variable "target_pools" {
+#   description = "The target load balancing pools to assign this group to."
+#   type        = list(string)
+#   default     = []
+# }
