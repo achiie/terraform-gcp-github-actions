@@ -3,10 +3,10 @@ provider "google" {
   region  = var.region
 }
 
-// Remote bucket //
+// Remote bucket 
 terraform {
   backend "gcs" {
-    bucket = "myvik-tf-state-prod"
+    bucket = "gh-actions-tf-state"
     prefix = "terraform/state"
   }
 }
