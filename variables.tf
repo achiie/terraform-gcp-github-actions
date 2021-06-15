@@ -4,16 +4,14 @@ variable "project_id" {
 }
 
 variable "region" {
-  type    = string
-  default = "europe-west3"
+  description = "GCP region identifier"
+  type        = string
 }
-
 
 variable "zones" {
   description = "GCP zone identifier"
   type        = list
 }
-
 
 variable "host_project" {
   description = "shared vpc name"
