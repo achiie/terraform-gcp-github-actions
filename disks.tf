@@ -1,5 +1,5 @@
-resource "google_compute_disk" "jenkins_follower_boot" {
-  name  = "jenkins-follower-boot"
+resource "google_compute_disk" "vm_boot" {
+  name  = "vm-bootboot"
   zone  = var.zones[0]
   image = "ubuntu-2004-lts"
   size  = 10

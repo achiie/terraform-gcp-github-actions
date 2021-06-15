@@ -1,5 +1,5 @@
 resource "google_compute_instance" "jenkins_follower" {
-  name                      = "jenkins-follower"
+  name                      = "gh-actions"
   machine_type              = "g1-small"
   zone                      = var.zones[0]
   allow_stopping_for_update = false
