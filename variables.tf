@@ -8,10 +8,10 @@ variable "region" {
   default = "europe-west2"
 }
 
-# variable "zones" {
-#   description = "GCP zone identifier"
-#   type        = list
-# }
+variable "zones" {
+  description = "GCP zone identifier"
+  type        = list
+}
 
 # variable "host_project" {
 #   description = "shared vpc name"
