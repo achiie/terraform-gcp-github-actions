@@ -1,16 +1,25 @@
-variable "project_id" {
-  type        = string
-  description = "The Google Cloud Project Id"
-}
+# variable "project_id" {
+#   type        = string
+#   description = "The Google Cloud Project Id"
+# }
 
 variable "region" {
-  description = "GCP region identifier"
-  type        = string
+  type    = string
 }
+
+# variable "region" {
+#   description = "GCP region identifier"
+#   type        = string
+# }
 
 variable "zones" {
   description = "GCP zone identifier"
   type        = list
+}
+
+variable "project_id" {
+  description = "Project ID"
+  type        = string
 }
 
 variable "host_project" {
