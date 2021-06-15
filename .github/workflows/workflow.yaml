@@ -34,7 +34,7 @@ jobs:
       env:
         GOOGLE_CREDENTIALS: ${{ secrets.GOOGLE_CREDENTIALS }}
 
-    # Validates the configuration used in the GitHub action workflow.
+    # Validates the configuration used in the GitHub action workflow
     - name: Terraform Validate
       id: validate
       run: terraform validate -no-color
