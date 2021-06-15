@@ -24,6 +24,8 @@ jobs:
     # Install the latest version of Terraform CLI and configure the Terraform CLI configuration file with a Terraform Cloud user API token
     - name: Setup Terraform
       uses: hashicorp/setup-terraform@v1
+      with:
+        terraform_version: 0.13.5
 
 
     # Initialize a new or existing Terraform working directory by creating initial files, loading any remote state, downloading modules, etc.
@@ -31,6 +33,12 @@ jobs:
       run: terraform init
       env:
         GOOGLE_CREDENTIALS: ${{ secrets.GOOGLE_CREDENTIALS }}
+
+    # Validates the configuration used in the GitHub action workflow.
+    - name: Terraform Validate
+      id: validate
+      run: terraform validate -no-color
+
 
     # Checks that all Terraform configuration files adhere to a canonical format
     - name: Terraform Format
