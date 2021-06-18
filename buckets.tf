@@ -1,3 +1,3 @@
 resource "google_storage_bucket" "bucket" {
-  name = "test-bucket-gh-actions-2022"
+  name = "test-bucket-gh-actions-2023"
 }
