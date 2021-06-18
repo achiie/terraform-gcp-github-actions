@@ -22,10 +22,10 @@ variable "region" {
 #   type = string
 # }
 
-# variable "network" {
-#   description = "Network to deploy to. Only one of network or subnetwork should be specified."
-#   default     = "skyde-test-net01"
-# }
+variable "network" {
+  description = "Network to deploy to. Only one of network or subnetwork should be specified."
+  default     = "skyde-test-net01"
+}
 
 # variable "subnetwork" {
 #   description = "Subnet to deploy to. Only one of network or subnetwork should be specified."
